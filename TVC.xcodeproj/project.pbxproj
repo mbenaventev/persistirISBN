@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6370F70F1CD7B2C9005DCC4B /* PrevISBNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370F70E1CD7B2C9005DCC4B /* PrevISBNViewController.swift */; };
 		63B911D61CD268C800F34439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B911D51CD268C800F34439 /* AppDelegate.swift */; };
-		63B911D81CD268C800F34439 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B911D71CD268C800F34439 /* ViewController.swift */; };
 		63B911DB1CD268C800F34439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B911D91CD268C800F34439 /* Main.storyboard */; };
 		63B911DE1CD268C800F34439 /* TVC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63B911DC1CD268C800F34439 /* TVC.xcdatamodeld */; };
 		63B911E01CD268C800F34439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B911DF1CD268C800F34439 /* Assets.xcassets */; };
 		63B911E31CD268C800F34439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B911E11CD268C800F34439 /* LaunchScreen.storyboard */; };
+		63B911EB1CD2690000F34439 /* TVCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B911EA1CD2690000F34439 /* TVCTableViewController.swift */; };
+		63B911ED1CD26D6F00F34439 /* ISBNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B911EC1CD26D6F00F34439 /* ISBNViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6370F70E1CD7B2C9005DCC4B /* PrevISBNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrevISBNViewController.swift; sourceTree = "<group>"; };
 		63B911D21CD268C600F34439 /* TVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B911D51CD268C800F34439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		63B911D71CD268C800F34439 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		63B911DA1CD268C800F34439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63B911DD1CD268C800F34439 /* TVC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TVC.xcdatamodel; sourceTree = "<group>"; };
 		63B911DF1CD268C800F34439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63B911E21CD268C800F34439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63B911E41CD268C800F34439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63B911EA1CD2690000F34439 /* TVCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVCTableViewController.swift; sourceTree = "<group>"; };
+		63B911EC1CD26D6F00F34439 /* ISBNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISBNViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				63B911D51CD268C800F34439 /* AppDelegate.swift */,
-				63B911D71CD268C800F34439 /* ViewController.swift */,
 				63B911D91CD268C800F34439 /* Main.storyboard */,
 				63B911DF1CD268C800F34439 /* Assets.xcassets */,
 				63B911E11CD268C800F34439 /* LaunchScreen.storyboard */,
 				63B911E41CD268C800F34439 /* Info.plist */,
 				63B911DC1CD268C800F34439 /* TVC.xcdatamodeld */,
+				63B911EA1CD2690000F34439 /* TVCTableViewController.swift */,
+				63B911EC1CD26D6F00F34439 /* ISBNViewController.swift */,
+				6370F70E1CD7B2C9005DCC4B /* PrevISBNViewController.swift */,
 			);
 			path = TVC;
 			sourceTree = "<group>";
@@ -139,9 +145,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63B911D81CD268C800F34439 /* ViewController.swift in Sources */,
 				63B911DE1CD268C800F34439 /* TVC.xcdatamodeld in Sources */,
 				63B911D61CD268C800F34439 /* AppDelegate.swift in Sources */,
+				63B911ED1CD26D6F00F34439 /* ISBNViewController.swift in Sources */,
+				6370F70F1CD7B2C9005DCC4B /* PrevISBNViewController.swift in Sources */,
+				63B911EB1CD2690000F34439 /* TVCTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +299,7 @@
 				63B911E91CD268C800F34439 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
