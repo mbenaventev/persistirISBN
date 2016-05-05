@@ -18,7 +18,7 @@ class ISBNViewController: UIViewController, UIPickerViewDelegate, UITableViewDel
     @IBOutlet weak var imgPortada: UIImageView!
     @IBOutlet weak var navItm: UINavigationItem!
     
-    var ISBNs = ["0060932686", "8401242282", "9788401242304", "8439719612", "9500700883", "9500726068"]
+    var ISBNs = ["0060932686", "8401242282", "9788401242304", "8439719612", "9500726068"]
     
     
     

@@ -60,10 +60,6 @@ class PrevISBNViewController: UIViewController {
                 lblMensaje.text="La conexión se realizo correctamente"
                 lblMensaje.textColor=UIColor.darkGrayColor()
             }
-                /*if texto != "{}"{
-                 lblMensaje.text="La conexión se realizo correctamente"
-                 lblMensaje.textColor=UIColor.darkGrayColor()
-                 }*/
             else{
                 lblMensaje.text="No se encontró el recurso que buscas"
                 lblMensaje.textColor=UIColor.orangeColor()

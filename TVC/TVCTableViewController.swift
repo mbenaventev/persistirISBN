@@ -7,34 +7,68 @@
 //
 
 import UIKit
+import CoreData
+
+
 
 class TVCTableViewController: UITableViewController{
-    
-    /*
-    var detailViewController: DetailViewController? = nil
-    var managedObjectContext: NSManagedObjectContext? = nil
-    */
-    
+
     var recibe: String = ""
     var isbn: String = ""
     var titulo: String = ""
     
     var libros : Array<Array<String>> = Array<Array<String>> ()
+    
+    var contexto : NSManagedObjectContext? = nil
+    
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         print(isbn, "-",titulo)
         
-        //self.libros.append([titulo,isbn])
+        self.contexto = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         
-        //self.libros.insert([titulo,isbn], atIndex: self.libros.count + 1)
+        let libroEntidad = NSEntityDescription.entityForName("Libro", inManagedObjectContext: self.contexto!)
+        //let peticion = libroEntidad?.managedObjectModel.fetfetchRequestFromTemplateWithName("petISBNs", substitutionVariables: )
+        let peticion = libroEntidad?.managedObjectModel.fetchRequestTemplateForName("petISBNs")
+        do {
+            let libroEntidad2 = try self.contexto?.executeFetchRequest(peticion!)
+            if (libroEntidad2!.count > 0){
+                print("Mayor a 0 - ", String(libroEntidad2!.count))
+                for libroEntidad3 in libroEntidad2! {
+                    let isbn_ = libroEntidad3.valueForKey("isbn") as! String
+                    let titulo_ = libroEntidad3.valueForKey("titulo") as! String
+                    self.libros.append([titulo_,isbn_])
+                }
+            }
+            else{
+                print("no hay datos")
+            }
+        }
+        catch{
+            
+        }
         
+        //Inserta
+            //var entidad = Set<NSObject>()
+        if (isbn != ""){
+            let nuevoLibro = NSEntityDescription.insertNewObjectForEntityForName("Libro", inManagedObjectContext: self.contexto!)
+            nuevoLibro.setValue(isbn, forKey: "isbn")
+            nuevoLibro.setValue(titulo, forKey: "titulo")
+            //entidad.insert(nuevoLibro)
+            do{
+                try self.contexto?.save()
+            }
+            catch{
+                
+            }
+        }
+        //end inserta
         
-        //if self.libros.count > 1 {
-          //  print(String(libros[1]))
-        //}
-        
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -68,38 +102,12 @@ class TVCTableViewController: UITableViewController{
         return cell
     }
     
-    /*
-    func insertNewObject(sender: AnyObject) {
-        let context = self.fetchedResultsController.managedObjectContext
-        let entity = self.fetchedResultsController.fetchRequest.entity!
-        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context)
-        
-        // If appropriate, configure the new managed object.
-        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-        newManagedObject.setValue(NSDate(), forKey: "timeStamp")
-        
-        // Save the context.
-        do {
-            try context.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            //print("Unresolved error \(error), \(error.userInfo)")
-            abort()
-        }
-    }
- */
-    
-
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
-
-    /*
+   
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
@@ -109,7 +117,7 @@ class TVCTableViewController: UITableViewController{
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+ 
 
     /*
     // Override to support rearranging the table view.

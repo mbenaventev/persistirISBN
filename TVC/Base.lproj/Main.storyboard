@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--TVC-->
+        <!--Mis libros-->
         <scene sceneID="7P1-GG-Plh">
             <objects>
                 <tableViewController id="IBW-0D-ep5" customClass="TVCTableViewController" customModule="TVC" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,7 +45,7 @@
                             <outlet property="delegate" destination="IBW-0D-ep5" id="X10-X9-BLP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TVC" id="Bhd-04-9So">
+                    <navigationItem key="navigationItem" title="Mis libros" id="Bhd-04-9So">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="v4m-hp-n2k">
                             <connections>
                                 <segue destination="vsW-Sf-suz" kind="push" id="sAD-Q7-Bah"/>
@@ -635,15 +635,20 @@
                                 <exclude reference="YfV-YX-3Rf"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="0oo-Ka-yXG"/>
+                                <exclude reference="2bx-eI-gXX"/>
+                                <exclude reference="Z5R-Zk-aIa"/>
+                                <exclude reference="sVv-OU-60e"/>
+                                <exclude reference="y8E-k7-VdP"/>
+                                <exclude reference="Egu-D8-r9x"/>
+                                <exclude reference="Nit-Sf-zQH"/>
+                                <exclude reference="nPN-mn-niB"/>
                                 <exclude reference="IBm-wu-aHv"/>
                                 <exclude reference="Whb-p0-Wh0"/>
                                 <exclude reference="Xvk-bL-zQ9"/>
                                 <exclude reference="0J8-eI-Cv5"/>
                                 <exclude reference="GiI-en-dhl"/>
                                 <exclude reference="d37-Nq-zkf"/>
-                                <exclude reference="Egu-D8-r9x"/>
-                                <exclude reference="Nit-Sf-zQH"/>
-                                <exclude reference="nPN-mn-niB"/>
                                 <exclude reference="1Xf-ND-tRx"/>
                                 <exclude reference="KDB-uV-bdr"/>
                                 <exclude reference="ZHJ-gf-dee"/>
@@ -658,11 +663,6 @@
                                 <exclude reference="6yV-UG-L9c"/>
                                 <exclude reference="eyI-pa-MID"/>
                                 <exclude reference="fsX-Ru-IfB"/>
-                                <exclude reference="0oo-Ka-yXG"/>
-                                <exclude reference="2bx-eI-gXX"/>
-                                <exclude reference="Z5R-Zk-aIa"/>
-                                <exclude reference="sVv-OU-60e"/>
-                                <exclude reference="y8E-k7-VdP"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -677,15 +677,20 @@
                                 <include reference="YfV-YX-3Rf"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="0oo-Ka-yXG"/>
+                                <include reference="2bx-eI-gXX"/>
+                                <include reference="Z5R-Zk-aIa"/>
+                                <include reference="sVv-OU-60e"/>
+                                <include reference="y8E-k7-VdP"/>
+                                <include reference="Egu-D8-r9x"/>
+                                <include reference="Nit-Sf-zQH"/>
+                                <include reference="nPN-mn-niB"/>
                                 <include reference="IBm-wu-aHv"/>
                                 <include reference="Whb-p0-Wh0"/>
                                 <include reference="Xvk-bL-zQ9"/>
                                 <include reference="0J8-eI-Cv5"/>
                                 <include reference="GiI-en-dhl"/>
                                 <include reference="d37-Nq-zkf"/>
-                                <include reference="Egu-D8-r9x"/>
-                                <include reference="Nit-Sf-zQH"/>
-                                <include reference="nPN-mn-niB"/>
                                 <include reference="1Xf-ND-tRx"/>
                                 <include reference="KDB-uV-bdr"/>
                                 <include reference="ZHJ-gf-dee"/>
@@ -700,11 +705,6 @@
                                 <include reference="6yV-UG-L9c"/>
                                 <include reference="eyI-pa-MID"/>
                                 <include reference="fsX-Ru-IfB"/>
-                                <include reference="0oo-Ka-yXG"/>
-                                <include reference="2bx-eI-gXX"/>
-                                <include reference="Z5R-Zk-aIa"/>
-                                <include reference="sVv-OU-60e"/>
-                                <include reference="y8E-k7-VdP"/>
                             </mask>
                         </variation>
                     </view>
